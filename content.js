@@ -24,6 +24,7 @@ function initVideoHandler() {
 			if (!video.dataset.listenerAttached) {
 				document.addEventListener("visibilitychange", () => {
 					if (document.visibilityState === "visible") {
+						video.muted = true; // mute the video
 						video.play().catch((err) => console.warn("Autoplay failed:", err));
 					} else {
 						video.pause();
