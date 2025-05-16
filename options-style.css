@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(20 22 31 / 1);
+    color: rgba(245, 245, 245, 0.927);
+}
+
+body {
+    max-width: 1440px;
+    padding-inline: 2rem;
+    font-family: "Noto Sans", sans-serif;
+}
+
+
+
+.description {
+    padding: 1.5rem;
+    padding-inline: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.5rem;
+    padding-top: unset;
+
+
+
+}
+
+.description-text {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+.description-text>h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description-text>p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+}
+
+#yt {
+    background: linear-gradient(to top, red, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#net {
+    background: linear-gradient(to top, red, rgba(0, 0, 0, 0.406));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#pv {
+    background: linear-gradient(to top, royalblue, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#etc {
+    background: linear-gradient(to top, #8d3df2, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description-image {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+
+}
+
+.description-image>img {
+    width: 100%;
+    padding: 1rem;
+}
+
+.image-to-use {
+    display: none;
+}
+
+.thank {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 2rem;
+    background-color: rgba(255, 255, 255, 0.201);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    margin-inline: 10%;
+}
+
+.thank>h3 {
+    background: linear-gradient(to right, #f25e55, #8d3df2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding: 4rem;
+
+}
+
+.htu {
+    margin-block: 1rem;
+    font-size: 2rem;
+    padding-inline: 4rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.927);
+}
+
+a:hover {
+    background: linear-gradient(to right, #f25e55, #8d3df2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contact {
+    margin-top: 1rem;
+    font-size: 2rem;
+    padding-inline: 4rem;
+}
