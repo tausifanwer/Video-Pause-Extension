@@ -1,5 +1,4 @@
 // Observe YouTube route changes (SPA behavior)
-
 let lastUrl = location.href;
 new MutationObserver(() => {
 	const currentUrl = location.href;
@@ -11,7 +10,6 @@ new MutationObserver(() => {
 
 function initVideoHandler() {
 	// Only apply on watch pages
-	// console.log(window.location.href.includes("/watch"));
 	if (!window.location.href.includes("/watch")) return;
 
 	// Wait until video is available
@@ -23,9 +21,19 @@ function initVideoHandler() {
 			// Prevent duplicate listeners
 			if (!video.dataset.listenerAttached) {
 				document.addEventListener("visibilitychange", () => {
+					if (!video) return;
+
 					if (document.visibilityState === "visible") {
-						video.muted = true; // mute the video
-						video.play().catch((err) => console.warn("Autoplay failed:", err));
+						// Delay avoids race condition
+						setTimeout(() => {
+							if (video.paused) {
+								video
+									.play()
+									.catch((err) =>
+										console.warn("Autoplay failed:", err.message)
+									);
+							}
+						}, 200);
 					} else {
 						video.pause();
 					}
