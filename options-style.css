@@ -10,6 +10,7 @@ body {
     max-width: 1440px;
     padding-inline: 2rem;
     font-family: "Noto Sans", sans-serif;
+    margin-inline: auto;
 }
 
 
